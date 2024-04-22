@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    margin-right: 1rem;
+    background-color: rgba(235, 236, 233, 0.678);
+    color: rgba(3, 116, 116, 0.966);
+}
+
+header span {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-right: 1rem;
+}
+
+ul li {
+    display: inline-flex;
+    margin-right: 1rem;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgba(3, 116, 116, 0.966);
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+header button {
+    padding: .8rem;
+    background-color: rgba(17, 236, 17, 0.979);
+    font-size: 1.1rem;
+    font-weight: 300;
+    border-radius: 1rem;
+    color: rgb(250, 241, 241);
+}
+
+header button:hover {
+    background-color: rgb(35, 230, 35);
+}
+
+/* Hero section */
+.hero {
+    background-image: url(./images/4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero p {
+    width: 80%; /* Adjust width for responsiveness */
+    font-size: 2rem;
+    color: rgb(77, 67, 67);
+}
+
+.hero button {
+    margin-top: .5rem;
+    padding: .6rem;
+    background-color: rgba(9, 201, 9, 0.63);
+    font-weight: 500;
+}
+
+.hero button:hover {
+    background-color: rgba(255, 0, 0, 0.39);
+}
+
+/* About us section */
+.about {
+    background-image: url(./images/7.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding: 2rem 5rem;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    color: rgb(252, 247, 247);
+}
+
+.about h1 {
+    grid-column: span 2;
+}
+
+.about p {
+    text-align: left;
+    padding: 2rem;
+}
+
+/* Services section */
+.services {
+    background-image: url(./images/9.jpg);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    text-align: center;
+    padding: 4rem;
+}
+
+.services h1 {
+    grid-column: span 4;
+    margin-top: 4rem;
+    font-weight: bold;
+    color: white;
+}
+
+.services section {
+    background-color: rgb(138, 138, 138);
+    height: 350px;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.services section h1 {
+    color: rgb(238, 203, 203);
+    margin-bottom: 1rem;
+}
+
+.services section p {
+    margin-top: 1rem;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: auto; /* Adjust hero section height to fit content */
+        padding: 2rem; /* Add padding for better spacing */
+    }
+
+    .hero p {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr; /* Adjust about us section to a single column layout */
+        padding: 2rem; /* Add padding for better spacing */
+    }
+
+    .services {
+        display: grid; /* Display as grid */
+        grid-template-columns: 1fr; /* Display a single grid column */
+        gap: 2rem; /* Add gap between grid items */
+        padding: 2rem; /* Add padding for better spacing */
+    }
+
+    .services section {
+        height: 300px; /* Set height to 300px */
+        width: 300px; /* Set width to 300px */
+        padding: 1rem; /* Add padding for better spacing */
+        text-align: center; /* Center align text */
+    }
+
+    .services section h1 {
+        font-size: 1.2rem; /* Decrease font size of headings */
+        margin-bottom: 0.5rem; /* Adjust margin for better spacing */
+    }
+
+    .services section p {
+        font-size: 0.9rem; /* Decrease font size of paragraphs */
+    }
+}
+
